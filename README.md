@@ -7,6 +7,42 @@ each other or not. This plagiarism detector prints the plagiarized lines or text
 between two files and in images, it highlights the area as rectangle which is
 similar in both the images
 
+## Features
+
+#### Text Comparison:
+Utilizes cosine similarity to assess the plagiarism percentage between two text files.
+Identifies common lines between the texts.
+#### Image Comparison:
+Uses Mean Squared Error (MSE) to evaluate the similarity between two images.
+Highlights common areas in the images.
+
+## Usage
+
+### Text Comparison
+1. Set the value val to 1 to perform text comparison.
+2. Place the text files you want to compare in the /content directory with the names text1.txt and text2.txt.
+3. Run the script.
+~~~bash
+python plagiarism_detection.py
+~~~
+4. The script will output the percentage of plagiarism between text1.txt and text2.txt, as well as identify similar lines between the two files. 
+
+### Image Comparison
+1. Set the value val to 2 to perform image comparison.
+2. Place the images you want to compare in the /content directory with the names river1.jpg and river2.jpg.
+3. Run the script.
+~~~bash
+python plagiarism_detection.py
+~~~
+4. The script will display the original images along with the common area highlighted, and it will determine whether the images are plagiarized based on Mean Squared Error (MSE) threshold.
+
+## Dependencies and Modules used 
+
+1. cv2: OpenCV (Open Source Computer Vision) is a popular open-source computer vision library that provides a set of tools and functions for image and  video processing, as well as machine learning algorithms for object detection, recognition, and tracking.
+2. math: It includes functions for performing basic arithmetic operations, advanced mathematical operations, and trigonometric functions.
+3. Google Colab: Used for displaying images in Colab environment.
+4. from google.colab.patches import cv2_imshow: This function takes an image as input and displays it using the cv2_imshow() function from the google.colab.patches module. You can use this function to display images in your Google Colab notebooks.
+
 ## Screenshots 
 
 ### Input
